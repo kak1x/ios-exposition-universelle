@@ -1,7 +1,7 @@
 # iOS 커리어 스타터 캠프
 # 🇰🇷🇫🇷 만국박람회
 
-> 프로젝트 기간: 2023.01.24 ~ 2023.02.03
+> 프로젝트 기간: 2023.02.20 ~ 2023.03.03
 > 
 > 팀원: 👨🏻‍💻[kaki](https://github.com/kak1x), 👨🏻‍💻[brody](https://github.com/seunghyunCheon) | 리뷰어: 👨🏻‍💻[havi](https://github.com/havilog)
 > 
@@ -17,7 +17,7 @@
 
 <br/>
 
-# ⏰ 타임라인 
+# ⏰ 타임라인
 <details>
     <summary><big>타임라인</big></summary>
 - 23.02.20 (월): JSON Data Model 구조체 구현 (STEP1 PR)
@@ -29,6 +29,12 @@
 - 22.02.23 (목): STEP2 리뷰 사항 수정 (화면 전환 방식 변경, 확장 및 프로토콜 추가)
 <br>
 - 22.02.24 (금) : STEP2 리뷰 사항 수정 (커스텀셀 XIB 생성, refactor)
+<br>
+- 22.02.27 (월) : STEP2 리뷰 사항 수정 (셀 configure 함수 생성, prepareForReuse 구현 및 refactor)
+<br>
+- 22.02.28 (화) : STEP2 리뷰 사항 수정 (String extension attributedString fileprivate 선언), , STEP3 구현 (오토레이아웃, Dynamic Type, Accessibility)
+<br>
+- 22.03.02 (목) : STEP3 리뷰 사항 수정 (셀 image 오토레이아웃 변경)
 </details>
 <br/>
 <br/>
@@ -36,41 +42,28 @@
 # ✍🏻 프로젝트 구조
 <details>
     <summary><big>폴더구조</big></summary>
-<img src = "https://i.imgur.com/hlQEW1h.png">
+<img src = "https://i.imgur.com/gT1cihK.png">
     </details>
 
 <details>
-    <summary><big>STEP2 UML</big></summary>
-<img src = "https://i.imgur.com/DdDduRN.png">
+    <summary><big>프로젝트 UML</big></summary>
+<img src = "https://i.imgur.com/WV6DVcQ.png">
     </details>
     
 <br/>
 <br/>
 
 # ✨ 실행 화면
-### 1. 초기화면
-<details>
-    <summary>실행화면</summary>
-<img src = "https://i.imgur.com/NQzeTpE.gif" width = "400">
-    
-- 스크롤 뷰에서 스크롤이 정상적으로 작동 됨.
-    </details>
 
-### 2. 출품작 페이지 이동
-<details>
-    <summary>실행화면</summary>
-<img src = "https://i.imgur.com/KCYXGIt.gif" width = "400">
+### 다이나믹 타입 미적용 화면
+|초기화면|출품작 페이지 이동|출품작 상세페이지 이동|
+|:-----:|:-----:|:-----:|
+| <img src = "https://i.imgur.com/NQzeTpE.gif" width = "300">|<img src = "https://i.imgur.com/KCYXGIt.gif" width = "300">  |<img src = "https://i.imgur.com/iCsvAAN.gif" width = "300">|
 
-- 출품작보러가기 버튼 클릭 시 segue객체를 이용해 출품작화면으로 이동함
-</details>
-
-### 3. 출품작 상세페이지 이동
-<details>
-    <summary>실행화면</summary>
-<img src = "https://i.imgur.com/iCsvAAN.gif" width = "400">
-    
-- 셀 클릭시 해당 셀에 맞는 상세페이지로 이동
-</details>
+### 다이나믹 타입 적용 화면
+|초기화면|출품작 페이지 이동|출품작 상세페이지 이동|
+|:---:|:----:|:----:|
+|<img src="https://i.imgur.com/oYqgYzu.gif" width = "300"/>|<img src="https://i.imgur.com/GqhGYza.gif" width = "300"/>|<img src="https://i.imgur.com/mo7D8pC.gif" width = "300"/>|
 
 <br/>
 <br/>
@@ -187,7 +180,11 @@ func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) ->
 <br/>
 
 # 참고 링크
-* [Swift 공식문서](https://www.swift.org/)
+* [Apple Developer Documentation - UITableView](https://developer.apple.com/documentation/uikit/uitableview)
+* [Apple Article - Filling a table with data](https://developer.apple.com/documentation/uikit/views_and_controls/table_views/filling_a_table_with_data)
+* [Apple Article - Using JSON with Custom Types](https://developer.apple.com/documentation/foundation/archives_and_serialization/using_json_with_custom_types)
+* [WWDC - Accessibility Insepector](https://developer.apple.com/videos/play/wwdc2019/257/)
+* [WWDC - Writing Great Accessibility Label](https://developer.apple.com/videos/play/wwdc2019/254/)
 * [iOS :: TableView xib로 구현하기](https://shark-sea.kr/entry/iOS-TableView-xib로-구현하기)
 * [UIViewController 서브클래스의 custom initializer 만들기](https://velog.io/@dev_jane/UIViewController-서브클래스의-custom-initializer-만들기required-initializer-initcoder-must-be-provided-by-subclass-of-UIViewController)
 * [dynamic tableView cell height](https://arcjeen.tistory.com/15)
